@@ -5,3 +5,5 @@
 
 
 https://youtube.com/shorts/iQULVvsGSos
+
+![initial](https://github.com/van1164/Sunwu-s_Closet/blob/main/system%20architecture.png)
