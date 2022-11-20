@@ -1,4 +1,4 @@
-from fastapi import APIRouter,UploadFile
+"""from fastapi import APIRouter,UploadFile
 
 router = APIRouter()
 
@@ -7,3 +7,4 @@ async def put_images():
     return {"test"}
 
 
+"""
