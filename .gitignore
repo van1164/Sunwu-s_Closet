@@ -2,3 +2,4 @@ BE/.idea
 *.pyc
 *.iml
 .idea
+/BE/app/.env
