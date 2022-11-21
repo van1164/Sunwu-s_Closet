@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from routes import s3bucket
 from fastapi.middleware.cors import CORSMiddleware
 from .routes import s3bucket,recommend
 from dotenv import load_dotenv
@@ -11,9 +10,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(BASE_DIR,".env"))
 
 origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
-    "http://localhost",
+    "ec2-3-101-101-80.us-west-1.compute.amazonaws.com:8080",
+    "ec2-3-101-101-80.us-west-1.compute.amazonaws.com",
+    "http://localhost:3000",
     "http://localhost:8080",
 ]
 
