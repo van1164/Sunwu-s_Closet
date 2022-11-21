@@ -15,9 +15,9 @@ class s3service:
     def upload_file(self, file):
         # filename 테스트 후 이름 바꾸기
         try:
-            res=self.client.upload_fileobj(file.read(),self.bucket_name,file.filename)
-            print(res)
+            res= self.client.upload_fileobj(file.file,self.bucket_name,file.filename,
+                                           ExtraArgs={'ContentType': file.content_type,'ACL': 'public-read'})
         except ClientError as e:
-            logging.error("e")
+            logging.error(e)
             raise
         return res
