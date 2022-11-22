@@ -14,7 +14,16 @@ async def main_recommend():
 
 @router.get("/app/{idx}", tags=["into_closet_idx"])
 async def into_closet(idx : str):
-    lst = Recomand(result_item_detail_new,result_cody_detail,result_style,['상의','navy'],le2,le)
+
+    if idx =='1':
+        lst = Recomand(result_item_detail_new,result_cody_detail,result_style,['상의','navy'],le2,le)
+        photo_url ='https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_145639673.jpg?raw=true'
+    elif idx =='2':
+        lst = Recomand(result_item_detail_new,result_cody_detail,result_style,['상의','grey'],le2,le)
+        photo_url ='https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_170527576.jpg?raw=true'
+    elif idx== '3' : 
+        lst = Recomand(result_item_detail_new,result_cody_detail,result_style,['상의','navy'],le2,le)
+        photo_url= 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_161928184.jpg?raw=true'
     temp_list = []
     
     for a,b in lst:
@@ -25,13 +34,19 @@ async def into_closet(idx : str):
     
     
     return {
-        'prev_content': {'photo:':'photo_url'+idx},
+        'prev_content': {'photo:':photo_url},
         'User_content':temp_list}
 
 
 @router.get("/app/recommendation/{idx}", tags=["recommendation_app"])
 async def into_recommend_closet(idx : str):
+    if idx =='1':
+        photo_url ='https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_145639673.jpg?raw=true'
+    elif idx =='2':
+        photo_url ='https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_170527576.jpg?raw=true'
+    elif idx== '3' : 
+        photo_url= 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_161928184.jpg?raw=true'
     return {
         'User_content':
-            {'photo': 'photoURL' + idx,
+            {'photo': photo_url,
              'info_url': 'https://www.musinsa.com/app/blackfriday/special'}}
