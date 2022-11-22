@@ -13,9 +13,9 @@ async def into_closet(idx : str):
     return {
         'prev_content': {'photo:':'photo_url'+idx},
         'User_content':[
-            {'photo' : 'photoURL1',  'idx': '1'},
-            {'photo' : 'photoURL2',  'idx': '2'},
-            {'photo' : 'photoURL3', 'idx': '3'}]}
+            {'photo' : 'https://image.msscdn.net/images/codimap/list/l_3_2022112115525600000019102.jpg?202211221111',  'idx': '1'},
+            {'photo' : 'https://image.msscdn.net/images/codimap/list/l_3_2022112115312100000017557.jpg?202211221111',  'idx': '2'},
+            {'photo' : 'https://image.msscdn.net/images/codimap/list/l_3_2022111713120700000009138.jpg?202211221111', 'idx': '3'}]}
 
 
 @router.get("/app/recommendation/{idx}", tags=["recommendation_app"])
