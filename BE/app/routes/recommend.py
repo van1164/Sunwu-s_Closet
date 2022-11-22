@@ -9,6 +9,8 @@ async def main_recommend():
         {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_145639673.jpg?raw=true', 'name' : 'photo_name_1', 'idx': '1'},
         {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_170527576.jpg?raw=true', 'name' : 'photo_name_2', 'idx': '2'},
         {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_161928184.jpg?raw=true', 'name' : 'photo_name_3', 'idx': '3'}]}
+    
+    
 
 @router.get("/app/{idx}", tags=["into_closet_idx"])
 async def into_closet(idx : str):
