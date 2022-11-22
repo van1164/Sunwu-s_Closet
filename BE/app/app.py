@@ -12,6 +12,7 @@ load_dotenv(os.path.join(BASE_DIR,".env"))
 origins = [
     "ec2-3-101-101-80.us-west-1.compute.amazonaws.com:8080",
     "ec2-3-101-101-80.us-west-1.compute.amazonaws.com",
+    "ec2-3-101-101-80.us-west-1.compute.amazonaws.com:3000",
     "http://localhost:3000",
     "http://localhost:8080",
 ]
