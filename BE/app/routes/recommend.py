@@ -6,9 +6,9 @@ router = APIRouter()
 @router.get("/app", tags=["into_closet"])
 async def main_recommend():
     return {'User_content':[
-        {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_145639673.jpg?raw=true', 'name' : 'photo_name_1', 'idx': '1'},
-        {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_170527576.jpg?raw=true', 'name' : 'photo_name_2', 'idx': '2'},
-        {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_161928184.jpg?raw=true', 'name' : 'photo_name_3', 'idx': '3'}]}
+        {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_145639673.jpg?raw=true', 'name' : '편하게', 'idx': '1'},
+        {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_170527576.jpg?raw=true', 'name' : '아끼는 옷', 'idx': '2'},
+        {'photo' : 'https://github.com/van1164/Sunwu-s_Closet/blob/main/img/KakaoTalk_20221113_161928184.jpg?raw=true', 'name' : '누나 만날때 입을 옷', 'idx': '3'}]}
     
     
 
