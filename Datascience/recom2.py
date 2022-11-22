@@ -13,8 +13,6 @@ from numpy import dot
 from numpy.linalg import norm
 from sklearn.metrics.pairwise import cosine_similarity
 import matplotlib.pyplot as plt
-import cv2
-from google.colab.patches import cv2_imshow
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
