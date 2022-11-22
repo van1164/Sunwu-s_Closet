@@ -28,8 +28,8 @@ async def into_closet(idx : str):
     
     for a,b in lst:
         new_dic =dict()
-        new_dic['photo'] = a
-        new_dic['idx'] = b
+        new_dic['photo'] = b
+        new_dic['idx'] = a
         temp_list.append(new_dic)
     
     
