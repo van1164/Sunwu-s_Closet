@@ -44,3 +44,8 @@ for a,i in result_style.iterrows():
 #그러고 나서 알맞는 column name을 할당해준다.
 brand_new_df = pd.DataFrame(final_list)
 result_style = brand_new_df
+
+le = LabelEncoder()
+result_item_detail_new['카테고리'] = le.fit_transform(result_item_detail_new['카테고리'])
+le2 = LabelEncoder()
+result_item_detail_new['색깔'] = le2.fit_transform(result_item_detail_new['색깔'])

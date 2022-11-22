@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from ..__init__ import result_style,result_cody_detail,result_item_detail_new
+from ..__init__ import result_style,result_cody_detail,result_item_detail_new,le2,le
 from .recom2 import Recomand
 router = APIRouter()
 
@@ -14,7 +14,7 @@ async def main_recommend():
 
 @router.get("/app/{idx}", tags=["into_closet_idx"])
 async def into_closet(idx : str):
-    lst = Recomand(result_item_detail_new,result_cody_detail,result_style,['상의','navy'])
+    lst = Recomand(result_item_detail_new,result_cody_detail,result_style,['상의','navy'],le2,le)
     temp_list = []
     
     for a,b in lst:

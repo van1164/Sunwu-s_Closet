@@ -17,12 +17,8 @@ from sklearn.preprocessing import LabelEncoder
 def cos_sim(A, B):
   return dot(A, B)/(norm(A)*norm(B))
 
-def Recomand(result_item_detail_new,result_cody_detail,result_style,input_list):
+def Recomand(result_item_detail_new,result_cody_detail,result_style,input_list, le2, le):
 #각 아이템에 대한 설명에서 카테고리와 색깔이 string으로 되어있으면 모델에 돌리기 힘들기때문에 각기 다른 labelencoder로 정수형태로 바꾸어 본다
-  le = LabelEncoder()
-  result_item_detail_new['카테고리'] = le.fit_transform(result_item_detail_new['카테고리'])
-  le2 = LabelEncoder()
-  result_item_detail_new['색깔'] = le2.fit_transform(result_item_detail_new['색깔'])
 
 #이는 각 label encoding 의 결과이다
 #le.classes_, le2.classes_
@@ -61,4 +57,5 @@ def Recomand(result_item_detail_new,result_cody_detail,result_style,input_list):
     for k in result_style.iterrows():
       if i[0] ==k[1][1]:
         lst.append([k[1][1], k[1][0]])
+        print(lst)
   return lst
