@@ -1,4 +1,6 @@
 from fastapi import APIRouter
+from ..__init__ import result_style,result_cody_detail,result_item_detail_new
+from .recom2 import Recomand
 router = APIRouter()
 
 @router.get("/app", tags=["into_closet"])
@@ -10,12 +12,19 @@ async def main_recommend():
 
 @router.get("/app/{idx}", tags=["into_closet_idx"])
 async def into_closet(idx : str):
+    lst = Recomand(result_item_detail_new,result_cody_detail,result_style,['상의','navy'])
+    temp_list = []
+    
+    for a,b in lst:
+        new_dic =dict()
+        new_dic['photo'] = a
+        new_dic['idx'] = b
+        temp_list.append(new_dic)
+    
+    
     return {
         'prev_content': {'photo:':'photo_url'+idx},
-        'User_content':[
-            {'photo' : 'https://image.msscdn.net/images/codimap/list/l_3_2022112115525600000019102.jpg?202211221111',  'idx': '1'},
-            {'photo' : 'https://image.msscdn.net/images/codimap/list/l_3_2022112115312100000017557.jpg?202211221111',  'idx': '2'},
-            {'photo' : 'https://image.msscdn.net/images/codimap/list/l_3_2022111713120700000009138.jpg?202211221111', 'idx': '3'}]}
+        'User_content':temp_list}
 
 
 @router.get("/app/recommendation/{idx}", tags=["recommendation_app"])
